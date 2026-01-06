@@ -1,4 +1,4 @@
-export default function TopBar() {
+export default function TopBar({ onMenuClick, isPinnedOpen }) {
   return (
     <div className="pt-2 px-2">
       <header
@@ -7,7 +7,13 @@ export default function TopBar() {
                          shadow-lg">
         {/* LEFT GROUP: menu + logo + search */}
         <div className="flex items-center gap-4">
-          <button className="p-3 rounded-lg">☰</button>
+          <button
+            className="p-3 rounded-lg"
+            onClick={onMenuClick}
+            aria-label="Toggle sidebar"
+            title={isPinnedOpen ? "Collapse sidebar" : "Expand sidebar"}>
+            ☰
+          </button>
 
           <span className="text-lg font-semibold">Luma</span>
 
