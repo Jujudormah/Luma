@@ -1,6 +1,6 @@
-export default function MovieCard({ title, poster, rating }) {
+export default function MovieCard({ title, poster, rating, onSelect }) {
   return (
-    <div className="w-40 flex-shrink-0 cursor-pointer group">
+    <div onClick={onSelect} className="w-40 flex-shrink-0 cursor-pointer group">
       <img
         src={poster}
         alt={title}
