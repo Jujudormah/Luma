@@ -1,6 +1,8 @@
 import { useState } from "react";
 import TopBar from "./components/layout/TopBar";
 import Sidebar from "./components/layout/SideBar";
+import MovieRow from "./components/movies/MovieRow";
+import { movies } from "./components/movies/movies";
 
 export default function App() {
   const [isPinnedOpen, setIsPinnedOpen] = useState(false);
@@ -17,9 +19,9 @@ export default function App() {
         <Sidebar isPinnedOpen={isPinnedOpen} />
 
         {/* Your main page content */}
-        <main className="p-4 text-white">
-          <h1 className="text-2xl font-bold">Home</h1>
-          <p className="text-zinc-300 mt-2">Your content goes here.</p>
+        <main className="flex-1 p-4">
+          <MovieRow title="Trending Now" movies={movies} />
+          <MovieRow title="Sci-Fi Picks" movies={movies} />
         </main>
       </div>
     </div>

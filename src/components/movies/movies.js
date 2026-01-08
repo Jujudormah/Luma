@@ -1,0 +1,92 @@
+export const movies = [
+  {
+    id: 1,
+    title: "Blade Runner 2049",
+    poster: "https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+    rating: 8.1,
+  },
+  {
+    id: 2,
+    title: "Dune",
+    poster: "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+    rating: 8.0,
+  },
+  {
+    id: 3,
+    title: "Interstellar",
+    poster: "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    rating: 8.6,
+  },
+  {
+    id: 4,
+    title: "The Dark Knight",
+    poster: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    rating: 9.0,
+  },
+  {
+    id: 5,
+    title: "Inception",
+    poster: "https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+    rating: 8.8,
+  },
+  {
+    id: 6,
+    title: "The Matrix",
+    poster: "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+    rating: 8.7,
+  },
+  {
+    id: 7,
+    title: "Arrival",
+    poster: "https://image.tmdb.org/t/p/w500/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg",
+    rating: 7.9,
+  },
+  {
+    id: 8,
+    title: "Mad Max: Fury Road",
+    poster: "https://image.tmdb.org/t/p/w500/8tZYtuWezp8JbcsvHYO0O46tFbo.jpg",
+    rating: 8.1,
+  },
+  {
+    id: 9,
+    title: "The Batman",
+    poster: "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+    rating: 7.8,
+  },
+  {
+    id: 10,
+    title: "Ex Machina",
+    poster: "https://image.tmdb.org/t/p/w500/dmJW8IAKHKxFNiUnoDR7JfsK7Rp.jpg",
+    rating: 7.7,
+  },
+  {
+    id: 11,
+    title: "Alien",
+    poster: "https://image.tmdb.org/t/p/w500/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
+    rating: 8.1,
+  },
+  {
+    id: 12,
+    title: "The Thing",
+    poster: "https://image.tmdb.org/t/p/w500/tzGY49kseSE9QAKk47uuDGwnSCu.jpg",
+    rating: 8.2,
+  },
+  {
+    id: 13,
+    title: "Minority Report",
+    poster: "https://image.tmdb.org/t/p/w500/ccqpHq5tk5W4ymbSBU6CzZ7fA6F.jpg",
+    rating: 7.6,
+  },
+  {
+    id: 14,
+    title: "Edge of Tomorrow",
+    poster: "https://image.tmdb.org/t/p/w500/uUHvlkLavotfGsNtosDy8ShsIYF.jpg",
+    rating: 7.9,
+  },
+  {
+    id: 15,
+    title: "District 9",
+    poster: "https://image.tmdb.org/t/p/w500/axFmCRNQeJhbK9J5wJf2JzW8kZz.jpg",
+    rating: 7.7,
+  },
+];
