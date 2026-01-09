@@ -13,6 +13,12 @@ export default function App() {
   const togglePinned = () => setIsPinnedOpen((p) => !p);
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [sciFiMovies, setSciFiMovies] = useState([]);
+  const [thrillerMovies, setThrillerMovies] = useState([]);
+  const [horrorMovies, setHorrorMovies] = useState([]);
+  const [comedyMovies, setComedyMovies] = useState([]);
+  const [dramaMovies, setDramaMovies] = useState([]);
+  const [familyMovies, setFamilyMovies] = useState([]);
+
   const [loading, setLoading] = useState(true);
 
   async function handleSelectMovie(movie) {
@@ -69,10 +75,40 @@ export default function App() {
           sort_by: "popularity.desc",
         });
 
+        const thriller = await tmdbFetch("/discover/movie", {
+          with_genres: 53,
+          sort_by: "popularity.desc",
+        });
+
+        const horror = await tmdbFetch("/discover/movie", {
+          with_genres: 27,
+          sort_by: "popularity.desc",
+        });
+
+        const comedy = await tmdbFetch("/discover/movie", {
+          with_genres: 35,
+          sort_by: "popularity.desc",
+        });
+
+        const drama = await tmdbFetch("/discover/movie", {
+          with_genres: 18,
+          sort_by: "popularity.desc",
+        });
+
+        const family = await tmdbFetch("/discover/movie", {
+          with_genres: 10751,
+          sort_by: "popularity.desc",
+        });
+
         if (cancelled) return;
 
         setTrendingMovies(trending.results.map(adaptMovie));
         setSciFiMovies(scifi.results.map(adaptMovie));
+        setThrillerMovies(thriller.results.map(adaptMovie));
+        setHorrorMovies(horror.results.map(adaptMovie));
+        setComedyMovies(comedy.results.map(adaptMovie));
+        setDramaMovies(drama.results.map(adaptMovie));
+        setFamilyMovies(family.results.map(adaptMovie));
       } catch (err) {
         console.error(err);
         alert(err.message);
@@ -110,6 +146,31 @@ export default function App() {
               <MovieRow
                 title="Sci-Fi Picks"
                 movies={sciFiMovies}
+                onSelectMovie={handleSelectMovie}
+              />
+              <MovieRow
+                title="Thriller"
+                movies={thrillerMovies}
+                onSelectMovie={handleSelectMovie}
+              />
+              <MovieRow
+                title="Horror"
+                movies={horrorMovies}
+                onSelectMovie={handleSelectMovie}
+              />
+              <MovieRow
+                title="Comedy"
+                movies={comedyMovies}
+                onSelectMovie={handleSelectMovie}
+              />
+              <MovieRow
+                title="Drama"
+                movies={dramaMovies}
+                onSelectMovie={handleSelectMovie}
+              />
+              <MovieRow
+                title="Kids & Family"
+                movies={familyMovies}
                 onSelectMovie={handleSelectMovie}
               />
             </>
