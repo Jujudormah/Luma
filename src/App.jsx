@@ -3,7 +3,7 @@ import TopBar from "./components/layout/TopBar.jsx";
 import Sidebar from "./components/layout/SideBar.jsx";
 import MovieRow from "./components/movies/MovieRow.jsx";
 import MovieModal from "./components/movies/MovieModal.jsx";
-import { movies } from "./components/movies/movies.js";
+import { trendingMovies, sciFiMovies } from "./components/movies/movies.js";
 
 export default function App() {
   const [isPinnedOpen, setIsPinnedOpen] = useState(false);
@@ -24,12 +24,12 @@ export default function App() {
         <main className="flex-1 overflow-y-auto p-4">
           <MovieRow
             title="Trending Now"
-            movies={movies}
+            movies={trendingMovies}
             onSelectMovie={setSelectedMovie}
           />
           <MovieRow
             title="Sci-Fi Picks"
-            movies={movies}
+            movies={sciFiMovies}
             onSelectMovie={setSelectedMovie}
           />
         </main>
